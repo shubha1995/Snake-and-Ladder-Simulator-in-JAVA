@@ -1,15 +1,16 @@
-import java.util.Scanner;
-
 public class SnakeLadder{
 public static void main(String[] args){
 	
-  int position = 0;
-  while(position<=99){
+	int count = 0;
+    int position = 0;
+    while(position<=99){
 	System.out.println("position is " + position);
 	int dice=(int) (Math.random() * 10) % 6+1;
-		System.out.println("dice value is " + dice);
+	position = (position + dice);
+	count =(count + 1);
+	System.out.println("dice value is " + dice);
 	int check = (int) (Math.random() * 10) % 3+1;
-	System.out.println("case number is " + check);
+	
 	 switch(check) {
 	   case 1:
 	   System.out.println( "No Play You are in the same position" );
@@ -32,7 +33,8 @@ public static void main(String[] args){
 	  }
 		 System.out.println( "Your Position after snake is" + position );
 	   break;
-	   }
 	  }
 	 }
+	System.out.println( "Dice play number " + count );
+	}
 	}
