@@ -7,7 +7,8 @@ public static void main(String[] args){
   while(position<=99){
 	System.out.println("position is " + position);
 	int dice=(int) (Math.random() * 10) % 6+1;
-		System.out.println("dice value is " + dice);
+	position = (position + dice);
+	System.out.println("dice value is " + dice);
 	int check = (int) (Math.random() * 10) % 3+1;
 	System.out.println("case number is " + check);
 	 switch(check) {
