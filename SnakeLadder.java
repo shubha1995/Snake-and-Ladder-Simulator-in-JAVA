@@ -5,6 +5,7 @@ public static void main(String[] args){
 	int position = 0;
 	System.out.println("position is " + position);
 	int dice = (int) (Math.random() * 10) % 6+1;
+	position = (position + dice);
 	System.out.println("dice value is " + dice);
 	
 	int check = (int) (Math.random() * 10) % 3+1;
@@ -22,11 +23,8 @@ public static void main(String[] args){
 	   case 3: 
 	   position = (position - dice);
 	  
-	  if(position<0){
-		  position = 0;
-	  }
-		 System.out.println( "Your Position after snake is" + position );
+	   System.out.println( "Your Position after snake is" + position );
 	   break;
-	   }
 	  }
 	 }
+        }
